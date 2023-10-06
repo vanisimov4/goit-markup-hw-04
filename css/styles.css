@@ -105,12 +105,26 @@ img {
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  padding: 24px 0;
+
+display: flex;
+flex-direction: column;
+align-items: flex-end;
+justify-content: flex-end;
+margin: 0;
 }
 
 .header-menu-link:hover,
 .header-menu-link:focus {
   color: #404bbf;
+}
+
+.header-menu-link:hover::after {
+  content: '';
+  width: 48px;
+    height: 4px;
+    border-radius: 2px;
+      background-color: #404BBF;
+margin: 0;
 }
 
 .header-address {
@@ -139,7 +153,11 @@ img {
 /* ======================================*/
 /* ================HERO======================*/
 .hero {
-  background: #2e2f42;
+  background-color: #2e2f42;
+  background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+
   padding: 188px 0;
 }
 
@@ -246,7 +264,7 @@ img {
 }
 
 .team-staff {
-  padding: 32px 0;
+  padding: 32px 16px;
 }
 
 .team-subtitle {
@@ -266,6 +284,40 @@ img {
   line-height: 1.5;
   letter-spacing: 0.02em;
 }
+
+.team-soc-list {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+
+.team-soc-item {
+
+width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #4D5AE5;
+}
+
+.team-soc-item:hover, .team-soc-link:focus {
+  background-color: #404BBF;
+}
+
+.team-soc-link {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+    justify-content: center;
+}
+
+.team-soc-icon {
+ 
+  fill: #F4F4FD;
+}
+
 /* ======================================*/
 /* ================PORTFOLIO======================*/
 .portfoio {
@@ -324,6 +376,14 @@ img {
   padding: 100px 0;
 }
 
+.footer-container {
+  display: flex;
+}
+
+.footer-about{
+  margin-right: 120px;
+}
+
 .footer-logo {
   display: inline-block;
   margin-bottom: 16px;
@@ -350,5 +410,23 @@ img {
   max-width: 264px;
 }
 
-.footer-container {
+.footer-soc {}
+
+.footer-soc-title {
+  color: #FFF;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+  margin-bottom: 16px;
 }
+
+.footer-soc-list {
+  display: flex;
+}
+
+.footer-soc-item {}
+
+.footer-soc-link {}
+
+.footer-soc-icon {}
